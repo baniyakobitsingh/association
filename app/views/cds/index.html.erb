@@ -1,0 +1,15 @@
+
+<table border="1">
+<tr>
+<td>Album</td>
+<td>Artist</td>
+<td>Show</td>
+</tr>
+<% @cds.each do |cd|  %>
+<tr>
+<td><%= cd.album %></td>
+<td><%= cd.artist %></td>
+<td><%= link_to "Show Songs", cd_songs_path(cd) %></td>
+</tr>
+<% end %>
+</table>
